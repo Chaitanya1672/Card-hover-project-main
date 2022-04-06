@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #333;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  text-align: center;
+
+  height: 100vh;
+  width: 100%;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.cards {
+  max-width: 320px;
+}
+.face {
+  width: 100%;
+  height: 200px;
+}
+.container .cards .face1 {
+  position: relative;
+  z-index: 1;
+
+  background: rgb(224, 112, 112);
+
+  transform: translateY(100px);
+  transition: 0.5s;
+}
+
+.cards:hover .face1 {
+  transform: translateY(0);
+  transition: 0.5s;
+}
+.container .face2 {
+  background: pink;
+
+  transform: translateY(-100px);
+
+  transition: 0.5s;
+
+  z-index: -100;
+}
+.cards:hover .face2 {
+  transform: translateY(0);
+
+  transition: 0.5s;
+}
+img {
+  margin: 10px 0 30px;
+}
+.cards .face2 p {
+  padding: 15px;
+
+  text-align: left;
+}
+.cards .face2 a {
+  text-decoration: none;
+
+  border: 1px solid black;
+
+  color: black;
+
+  display: inline-block;
+  padding: 1%;
+}
+.cards .face2 a:hover {
+  background: #111;
+  color: #fff;
+
+  box-shadow: 2px 2px #333;
+  transition: 0.3s;
+}
